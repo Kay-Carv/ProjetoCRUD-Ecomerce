@@ -1,0 +1,17 @@
+npm create vite@latest .
+Escolher:
+framework : React
+Variant : Javascript 
+
+npm install
+npm run dev
+copiar git ignore e colar no backend
+Limpeza:
+    -apagar dentro do public
+    -src/assets/react.svg
+    -apagar o App.css
+    -App.jsx
+        -apagar tudo acima da function
+        -apagar a linha abaixo da function
+        -apagar tudo que estiver dentro dos fragments <> </>
+    -apagar todo conteúdo do arquivo index.css 
