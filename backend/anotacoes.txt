@@ -1,0 +1,8 @@
+criar a estrutura backend 
+
+npm init -y 
+npm install express cors
+npm install nodemon 
+
+touch server.js
+mkdir data
