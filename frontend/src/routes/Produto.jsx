@@ -8,6 +8,8 @@ const Produto = ({produto}) => {
     const dispatch = useDispatch();
 
     const handleAddCarrinho = () => {
+
+        // PopUp de alerta
         dispatch(adicionarCarrinho(produto));
         Swal.fire({
             title: "Produto adicionado ao carrinho",
