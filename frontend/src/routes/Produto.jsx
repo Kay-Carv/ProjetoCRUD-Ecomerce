@@ -19,10 +19,10 @@ const Produto = ({produto}) => {
         })
 
     // função para pegar a requisição do servidor
-    fetch(`http://localhost:3001/carrinho/adicionar`,{
+    fetch('http://localhost:3001/carrinho/adicionar',{
         method:"POST",
         headers:{
-            'Content-Type':'aplication/json',
+            'Content-Type':'application/json',
         },
         body:JSON.stringify({produtoId:produto.id, quantidade:1}),
     })
@@ -39,7 +39,7 @@ const Produto = ({produto}) => {
         }
     })
     .catch(error => {
-        console.logl("Erro ao enviar os dados para o servidor", error)
+        console.log("Erro ao enviar os dados para o servidor", error)
     })
 
 }
