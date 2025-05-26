@@ -1,5 +1,5 @@
 import { useDispatch } from "react-redux" 
-import { addToCart } from "../store/cartSlice"
+import { adicionarCarrinho } from "../store/cartSlice"
 import Swal from "sweetalert2"
 
 
@@ -8,7 +8,7 @@ const Produto = ({produto}) => {
     const dispatch = useDispatch();
 
     const handleAddCarrinho = () => {
-        dispatch(addToCart(produto));
+        dispatch(adicionarCarrinho(produto));
         Swal.fire({
             title: "Produto adicionado ao carrinho",
             text: `${produto.nome} foi adicionado ao carrinho`,

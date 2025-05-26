@@ -11,7 +11,7 @@ const cartSlice = createSlice({
   // Reducers definem como o estado do carrinho deve ser alterado em resposta a actions.
   reducers: {
     // Reducer para adicionar um item ao carrinho.
-    addToCart: (state, action) => {
+    adicionarCarrinho: (state, action) => {
       // Procura se o item já existe no carrinho.
       const item = state.find((i) => i.id === action.payload.id);
 
@@ -25,20 +25,20 @@ const cartSlice = createSlice({
     },
 
     // Reducer para remover um item do carrinho.
-    removeFromCart: (state, action) => {
+    removerCarrinho: (state, action) => {
       // Filtra o array de itens, removendo o item com o ID correspondente.
       return state.filter((item) => item.id !== action.payload.id);
     },
 
     // Reducer para limpar o carrinho, retornando um array vazio.
-    clearCart: (state) => {
+    limparCarrinho: (state) => {
       return [];
     },
   },
 });
 
 // Exporta as actions geradas pelo createSlice.
-export const { addToCart, removeFromCart, clearCart } = cartSlice.actions;
+export const { adicionarCarrinho, removerCarrinho, limparCarrinho } = cartSlice.actions;
 
 // Seletor para calcular a quantidade total de itens no carrinho.
 export const selectCartItemsCount = (state) => {
