@@ -2,9 +2,9 @@ const express = require('express')
 const cors = require('cors')
 const path = require('path')
 const fs = require('fs').promises;
-
 const app = express();
 const Port = 3001;
+
 //Middleware para permitir que o frontend acesse 
 //o servidor backend em diferentes dominios
 app.use(cors());
@@ -12,13 +12,13 @@ app.use(cors());
 app.use(express.json());
 
 //Middleware para 
-app.use(express.static('static'));
+app.use(express.static('public')); //ndica que o servidor servirá arquivos estáticos de uma pasta chamada "public"
 
 // ROTA -GET-BUSCAR PRODUTOS
 app.get('/produtos', async(req,res) =>{ //É uma ação que pode executar mais de uma coisa ao mesmo tempo
     // Tratamento de erros para evitar crashs
     try {
-        const file =path.join(__dirname,'data','produtos.json');
+        const file =path.join(__dirname,'data','produtos.json'); //Acessa a pasta Data e o arquivo dos produtos.json
         const data = await fs.readFile(file,'utf8'); //await = esperar antes para ler o arquivo
         const produtos = JSON.parse(data)
         res.json(produtos)
