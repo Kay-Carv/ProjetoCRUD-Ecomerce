@@ -41,7 +41,7 @@ const Carrinho = () => {
 
   return (
     <div className='p-4'>
-      <h2 className='text-2xl font-semibold mb-4'> Seu carrinho </h2>
+      <h2 className='text-2xl font-semibold mb-4'> Seu Carrinho </h2>
       <ul className='space-y-2'>
         {carrinho.map((item) =>(
           <li className='flex justify-between items-center border-b pb-2' key={item.id}>
@@ -76,7 +76,7 @@ const Carrinho = () => {
         </button>
 
       </div>
-      
+
     </div>
   )
 }

@@ -9,12 +9,11 @@ function App() {
     <Router>
       <div className="min-h-screen flex flex-col">
         <main className="grow">
-        <Header>
+        <Header/>
           <Routes>
             <Route path="/" element={<Home/>}/>
             <Route path="/carrinho" element={<Carrinho/>}/>
           </Routes>
-        </Header>
         </main>
       </div>
     </Router>
